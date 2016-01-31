@@ -36,6 +36,7 @@ struct node * insertAtEveryKthNode(struct node *head, int K) {
 			newnode->num = K;
 			newnode->next = head->next;
 			head->next = newnode;
+			head = newnode;
 			curind = 1;
 		}
 		head = head->next;
